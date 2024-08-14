@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <!--Busque su emoji en https://www.w3schools.com/html/html_emojis.asp-->
+        <title> 🐙 ¡Segunda clase!</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <p>
+                    <a href="index.html" class="activo">Bienvenidos</a>
+                    <a href="page.html">Dibuje</a>
+            </p>
+            <h1></h1>
+            <h2></h2>
+            <p>Tomé este curso porque siempre me ha interesado la programación y la creación de páginas web. Es un área del diseño que considero super importante ya que esta siendo un requerimiento base en muchas áreas laborales.</p>         
+        </header>
+        <main>
+        </main>
+        <script>
+            var saludo = {
+                arriba:["¡Hola mundo!","¡Hola universo!", "¡Hola orbe!", "Hola cabros"],
+                abajo: "Mi nombre es Martin Arrieta",
+            };
+
+            var titular;
+            var nombre;
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                //selecciona un par de colores en https://materialui.co/colors
+                background('#FFAB91');
+                stroke('#455A64');
+                titular = select('h1');
+                titular.html(random(saludo.arriba));
+                nombre = select('h2');
+                nombre.html(saludo.abajo);
+            }
+            function draw(){
+                background('#FFAB91');
+                textSize(48);
+                text('🐙',mouseX,mouseY);
+            }
+        </script>
+    </body>
+</html>
